@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartUser">
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="370dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="This is a simple budgeting
+        app that helps you account for the money you spend!
+        We’ll help you keep track of your expenses, as well as a virtual savings account.
+        You can also let extra money be rolled over to the next period.
+        One important feature to remember is that at the end of an income period,
+        you will either have a positive or negative balance. If it’s positive,
+        you can either roll that amount forward to the next budget period or
+        tell us to get rid of it (hopefully you save it, but we’re not pushy).
+        If you overspend your budget, we can deduct it from the virtual savings account,
+         or we can reduce the next period’s budget. If you’re ever confused about what a
+         term means, tap it to bring up an explanation! For people with complicated expenses,
+         this app may not be right for you, but if you’re flying through life without caring
+         where your money ends up, we can help you be a little more careful!"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <Button
+        android:id="@+id/create_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Create a Budget!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.745" />
+
+    <Button
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Info"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_budget"
+        app:layout_constraintVertical_bias="0.191" />
+
+
+</android.support.constraint.ConstraintLayout>

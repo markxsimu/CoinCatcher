@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CoinCatch</string>
+    <string-array name="freq_spin_item">
+        <item>Select</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+</resources>
