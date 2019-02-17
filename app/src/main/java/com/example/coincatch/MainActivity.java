@@ -1,15 +1,8 @@
 package com.example.coincatch;
 
-import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Environment;
-import android.renderscript.ScriptGroup;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,14 +12,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.DatabaseMetaData;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 import java.lang.String;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static String new_user = null;
     private static String save_type = null;
     private static String recur_cred = null;
-    private static String over_spend = null;
+    private static String budget_min = null;
     private static String trck_amt = null;
 
     EditText mEditText;
@@ -43,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     {
         save_type = freq;
     }
+    public static void setRecur(String recur) { recur_cred = recur; }
+    public static void setBudMin(String min) { budget_min = min; }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,13 +73,13 @@ public class MainActivity extends AppCompatActivity {
                 {
                     save_type = text;
                 }
-                else if (text == "budget_amt")
+                else if (text == "recur_cred")
                 {
                     recur_cred = text;
                 }
-                else if (text == "over_spend")
+                else if (text == "budget_min")
                 {
-                    over_spend = text;
+                    budget_min = text;
                 }
                 else if (text == "trck_amt")
                 {
@@ -112,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             fos.write("new_user:false\n".getBytes());
             fos.write("save_type:none\n".getBytes());
             fos.write("recur_cred:none\n".getBytes());
-            fos.write("over_spend:none\n".getBytes());
+            fos.write("budget_min:none\n".getBytes());
             fos.write("trck_amt:none\n".getBytes());
 
             Toast.makeText(this,"Saved to" + getFilesDir() + "/" + FILE_NAME, Toast.LENGTH_LONG).show();

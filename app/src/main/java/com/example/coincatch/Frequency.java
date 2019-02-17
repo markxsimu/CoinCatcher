@@ -36,7 +36,8 @@ public class Frequency extends AppCompatActivity implements AdapterView.OnItemSe
                 String save_type = spinner.getSelectedItem().toString();
                 //Toast.makeText(Frequency.this,"stuff " + save_type,Toast.LENGTH_LONG).show();
                 MainActivity.setFreq(save_type);
-
+                Intent recur = new Intent(Frequency.this,RecurCredit.class);
+                startActivity(recur);
             }
         });
 

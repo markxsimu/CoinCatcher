@@ -5,4 +5,13 @@
         <item>Weekly</item>
         <item>Monthly</item>
     </string-array>
+    <string-array name="cat_spin_item">
+        <item>Select</item>
+        <item>Food</item>
+        <item>Bills</item>
+        <item>Entertainment</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
 </resources>
+
