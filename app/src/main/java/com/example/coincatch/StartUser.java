@@ -26,6 +26,7 @@ public class StartUser extends AppCompatActivity {
                 Intent switchAct = new Intent(StartUser.this, Frequency.class);
                 Log.v("SHIIIT","YO");
                 startActivity(switchAct);
+                finish();
 
 
             }});

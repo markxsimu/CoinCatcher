@@ -38,6 +38,7 @@ public class Frequency extends AppCompatActivity implements AdapterView.OnItemSe
                 MainActivity.setFreq(save_type);
                 Intent recur = new Intent(Frequency.this,RecurCredit.class);
                 startActivity(recur);
+                finish();
             }
         });
 
